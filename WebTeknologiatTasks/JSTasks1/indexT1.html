@@ -6,22 +6,6 @@
 </head>
 <body>
 
-<script>
-
-    function calculateBMI() {
-
-      let height = document.getElementById(numero);
-      let weight = document.getElementById(paino);
-
-      let bmi = weight / ((height * height) / 10000);
-
-    }
-
-
-
-
-</script>
-
 <form>
 
     <p>Height in centimeters</p>
@@ -30,9 +14,27 @@
     <p>Weight in kilograms</p>
     <input type="number" id="paino" min="0" max="1000">
 
-    <input type="submit" id="send" onclick="calculateBMI()">
+    <input type="button" id="send" onclick="calculateBMI()" value="Laske">
+
+    <p>BMI arvo:</p>
+    <p id="teksti"></p>
 
 </form>
+
+
+<script>
+
+  function calculateBMI() {
+    let height = document.getElementById("numero").value;
+    let weight = document.getElementById("paino").value;
+
+    let bmi = weight / ((height * height) / 10000);
+    console.log("W:" + weight);
+    console.log("H:" + Math.round(bmi));
+    document.getElementById("teksti").innerHTML=bmi;
+  }
+
+</script>
 
 </body>
 </html>

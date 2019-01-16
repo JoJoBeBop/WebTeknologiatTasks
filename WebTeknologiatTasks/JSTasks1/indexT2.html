@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+
+<form>
+    <p>First number</p>
+    <input type="number" id="num1" min="0">
+
+    <p>Second number</p>
+    <input type="number" id="num2" min="0">
+
+    <input type="button" id="send" onclick="calculate()" value="Calculate">
+
+    <p>Greatest common divisor:</p>
+    <p id="teksti"></p>
+</form>
+
+
+<script>
+
+    function calculate() {
+
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
+      let num3, num4;
+
+      let es;
+
+      while (num2 !== 0) {
+        es = num2;
+        num2 = num1 % num2;
+        console.log(num1);
+        num1 = es;
+      }
+
+      num3 =
+
+      console.log("Vastaus: " + num1);
+      document.getElementById("teksti").innerHTML=num1;
+
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="216ac3d7-f423-4626-9ec6-0f2755b45412" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/WebTeknologiatTasks/JSTasks1/indexT1.html" afterPath="$PROJECT_DIR$/WebTeknologiatTasks/JSTasks1/indexT1.html" />
+      <change beforePath="$PROJECT_DIR$/WebTeknologiatTasks/JSTasks1/indexT2.html" afterPath="$PROJECT_DIR$/WebTeknologiatTasks/JSTasks1/indexT2.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="indexT2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebTeknologiatTasks/JSTasks1/indexT2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="320">
+              <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -197,12 +196,12 @@
       <option name="presentableId" value="Default" />
       <updated>1547542345418</updated>
       <workItem from="1547542346554" duration="5717000" />
-      <workItem from="1547621764911" duration="13105000" />
+      <workItem from="1547621764911" duration="13434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18822000" />
+    <option name="totallyTimeSpent" value="19151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2561" y="23" width="1198" height="962" extended-state="0" />
@@ -323,8 +322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebTeknologiatTasks/JSTasks1/indexT2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="320">
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding />
         </state>
       </provider>

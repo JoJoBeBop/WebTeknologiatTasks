@@ -1,6 +1,46 @@
-.container {
+html {
+
+    background: -webkit-radial-gradient(rgb(96, 179, 255), rgb(79, 115, 150));
+    background: radial-gradient(rgb(96, 179, 255), rgb(79, 115, 150));
+
     height: 100%;
     width: 100%;
+
+
+}
+
+.container {
+    height: 100%;
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#sunDiv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#theSun {
+    display: block;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+
+    /*Sun shining effect*/
+    background: -webkit-radial-gradient(rgb(221, 237, 22), rgb(226, 114, 114));
+    background: radial-gradient(rgb(221, 237, 22), rgb(226, 114, 114));
+    opacity: 0.95;
+
+    box-shadow: 1px 1px 300px yellow;
+
 }
 
 #lightBox {
@@ -8,7 +48,8 @@
     width: 80px;
     background-color: black;
     border: 6px solid darkgray;
-    border-radius: 7px;
+
+    border-radius: 25px / 10px;
 
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +62,13 @@
     height: 175px;
     width: 20px;
     background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+
+
 }
 
 .lights {
@@ -28,21 +76,54 @@
     width: 40px;
     border-radius: 50%;
     padding: 3px;
+
+    /*Shadowing*/
+    -moz-box-shadow:    inset 0 0 20px #000000;
+    -webkit-box-shadow: inset 0 0 20px #000000;
+    box-shadow:         inset 0 0 20px #000000;
+
+    /* polka dots*/
+    background:
+            -moz-radial-gradient(black 5%, transparent 20%),
+            -moz-radial-gradient(black 5%, transparent 20%),
+            black;
+    background-size:5px 5px;
 }
 
-#lightNum1 {
-    background-color: red;
+/*Traffic lights*/
 
+#lightNum1 {
+    background-color: #ff3300;
+}
+
+#lightNum1:hover {
+    background-color: #cc2900;
+}
+
+#lightNum1:active {
+    background-color: #000000;
 }
 
 #lightNum2 {
-    background-color: yellow;
-    background-image: radial-gradient(black);
+    background-color: #ffff00;
+}
 
+#lightNum2:hover {
+    background-color: #e6e600;
+}
+
+#lightNum2:active {
+    background-color: #000000;
 }
 
 #lightNum3 {
-    background-color: green;
+    background-color: #33cc33;
+}
 
+#lightNum3:hover {
+    background-color: #29a329;
+}
 
+#lightNum3:active {
+    background-color: #000000;
 }

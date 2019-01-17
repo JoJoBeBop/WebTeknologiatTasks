@@ -1,17 +1,83 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Courier, sans-serif;
+}
 
+html {
     background: -webkit-radial-gradient(rgb(96, 179, 255), rgb(79, 115, 150));
     background: radial-gradient(rgb(96, 179, 255), rgb(79, 115, 150));
 
     height: 100%;
     width: 100%;
+}
 
+#textDiv {
+    width: 45%;
+}
 
+#titleText {
+    font-family: 'Coiny', cursive;
+    max-width: 80%;
+    font-weight: bold;
+    font-size: 300%;
+    padding: 1%;
+}
+
+#boxDiv {
+    border: 3px solid orange ;
+    padding: 1%;
+    width: 25%;
+    height: 250px;
+
+    left: 5%;
+    position: fixed;
+    bottom: 5%;
+
+    border-radius: 25px;
+}
+
+.speech-bubble {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 250px;
+
+    background: #b8af7f;
+    border-radius: .4em;
+    opacity: 0.8;
+
+    width: 20%;
+    height: 250px;
+
+    left: 5%;
+    position: fixed;
+    bottom: 5%;
+}
+
+.speech-bubble:after { content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #b8af7f;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+#bubbleText {
+    text-align: center;
+    font-size: 300%;
+    top: 50%;
 }
 
 .container {
-    height: 100%;
-    width: 25%;
+    position: fixed;
+    right: 10%;
+    bottom: 25%;
 
     display: flex;
     align-items: center;
@@ -23,8 +89,9 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
+    z-index: -2;
+
 }
 
 #theSun {
@@ -67,7 +134,37 @@ html {
     align-items: center;
     justify-content: center;
     max-width: 50%;
+}
 
+#mound1 {
+    position: fixed;
+    bottom: 0;
+    width: 70%;
+    height: 200px;
+
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 1000px 200px;
+    z-index: -1;
+
+
+    background: -webkit-linear-gradient(0deg, rgb(156, 140, 90), rgb(211, 177, 70));
+    background: linear-gradient(0deg, rgb(156, 140, 90), rgb(211, 177, 70));
+
+}
+
+#mound2 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+
+    border-top-right-radius: 100px 20px;
+    border-top-left-radius: 1000px 300px;
+    z-index: -2;
+
+
+    background: -webkit-linear-gradient(0deg, rgb(156, 140, 90), rgb(211, 177, 70));
+    background: linear-gradient(0deg, rgb(156, 140, 90), rgb(211, 177, 70));
 
 }
 

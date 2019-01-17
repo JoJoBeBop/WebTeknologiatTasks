@@ -17,6 +17,7 @@
 
     <p>Greatest common divisor:</p>
     <p id="teksti"></p>
+    <p id="teksti2"></p>
 </form>
 
 
@@ -26,7 +27,8 @@
 
       let num1 = document.getElementById("num1").value;
       let num2 = document.getElementById("num2").value;
-
+      let x = num1;
+      let z = num2;
       let es;
 
       while (num2 !== 0) {
@@ -36,9 +38,8 @@
         num1 = es;
       }
 
-      console.log("Vastaus: " + num1);
       document.getElementById("teksti").innerHTML=num1;
-
+      document.getElementById("teksti2").innerHTML=(x/num1) + " / " + (z/num1);
     }
 
 

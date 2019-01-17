@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Task 3</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+<!--
+
+<form>
+
+    <div>
+        <h3>Guess The Number</h3>
+
+        <p>Guess the number between 1 and 100 or insert your own max and min numbers!</p>
+        <p> Enter a guess: </p><input type="number" id="numero">
+        <input type="button" onclick="calculateBMI()" value="Guess">
+
+
+        <p>Previous guesses: </p>
+        <p id="guesses"></p>
+    </div>
+
+
+    <div>
+        <h4>Insert own numbers</h4>
+
+        <p>Min number: </p><input type="number" id="newMin">
+        <p>Max number: </p><input type="number" id="newMax">
+
+
+        <input type="button" id="send" onclick="calculateBMI()" value="Insert">
+
+        <div>
+            <h4>New Game</h4>
+            <input type="button" onclick="calculateBMI()" value="Restart">
+
+        </div>
+    </div>
+</form>
+-->
+
+<h1>Number guessing game</h1>
+
+<p>Guess the number between 1 and 100 or insert your own max and min numbers.</p>
+
+<div class="form">
+    <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+    <input type="submit" value="Submit guess" class="guessSubmit">
+</div>
+
+<div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+</div>
+
+<script>
+
+  let minNum = 10;
+  let maxNum = 11;
+
+  let randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+  let guessCount = 1;
+  let resetButton;
+
+  const guesses = document.querySelector('.guesses');
+  const lastResult = document.querySelector('.lastResult');
+  const lowOrHi = document.querySelector('.lowOrHi');
+  const guessSubmit = document.querySelector('.guessSubmit');
+  const guessField = document.querySelector('.guessField');
+
+
+  /*Check / win / lose-function*/
+  function check() {
+
+    console.log("The random number: " + randomNumber);
+
+    let userGuess = Number(guessField.value);
+    if (guessCount === 1) {
+      guesses.textContent = "Previous guesses: ";
+
+    }
+    guesses.textContent+= userGuess + " ";
+
+    /*Win*/
+    if (userGuess === randomNumber) {
+      lastResult.textContent = "You guessed the right number!";
+      lastResult.style.backgroundColor = "green";
+      lowOrHi.textContent = " ";
+      gameOver();
+
+      /*Lose / Keep guessing*/
+    } else if (guessCount === 10){
+      lastResult.textContent = "You Lose :(";
+      gameOver();
+
+    } else {
+      lastResult.textContent = "Incorrect";
+      lastResult.style.backgroundColor = "red";
+      if (userGuess < randomNumber) {
+        lowOrHi.textContent = "Too low";
+      } else if (userGuess > randomNumber) {
+        lowOrHi.textContent = "Too high";
+
+      }
+    }
+
+    guessCount++;
+    guessField.value = " ";
+    guessField.focus();
+  }
+
+  guessSubmit.addEventListener("click", check);
+
+
+  function gameOver() {
+
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
+    resetButton = document.createElement("button");
+    resetButton.textContent = "New Game";
+    document.body.appendChild(resetButton);
+    resetButton.addEventListener("click", reset);
+  }
+
+  function reset() {
+
+    guessCount = 1;
+    const resetParas = document.querySelectorAll(".resultParas p");
+
+    for (let i = 0; i < resetParas.length; i++){
+      resetParas[i].textContent = " ";
+    }
+    resetButton.parentNode.removeChild(resetButton);
+
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = " ";
+    guessField.focus();
+
+    lastResult.style.backgroundColor = "white";
+    randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+  }
+
+
+</script>
+
+</body>
+</html>

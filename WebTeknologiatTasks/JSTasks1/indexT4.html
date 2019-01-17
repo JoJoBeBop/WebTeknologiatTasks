@@ -2,13 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task 1</title>
+    <title>Task 4</title>
 </head>
 <body>
 
 
+<input type="submit" value="Do the thing" onclick="drawNumber()">
+<p>Lotto numerot 1-40:</p>
+<p id="teksti"></p>
+
+
 
 <script>
+
+  let minNum = 1;
+  let maxNum = 40;
+  let numArray = [];
+
+
+  function drawNumber() {
+
+    for (let i = 1; i <= 7; i++){
+
+      let done = true;
+      let numbers = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+
+      for (let j = 0; j < maxNum; j++){
+        if (numArray[j] === numbers) {
+          done = false;
+        }
+      }
+
+      if (done) {
+        numArray.push(numbers);
+      } else {
+        i--;
+      }
+      console.log(numbers + " ja "+ numArray);
+    }
+    order();
+  }
+
+
+  /*Inspiration from:  https://codepen.io/ferhatkatesci/pen/Gxzxyg*/
+  function order() {
+    let high = 0;
+
+    for(let y = 0; y < numArray.length; y++) {
+      for(let g = y + 1; g < numArray.length; g++) {
+
+        if(numArray[g] < numArray[y]) {
+          high = numArray[y];
+          numArray[y] = numArray[g];
+          numArray[g] = high;
+        }
+      }
+    }
+    document.getElementById("teksti").innerHTML=numArray.join(" - ");
+    console.log(numArray.join(" - "))
+
+  }
+
 
 
 </script>

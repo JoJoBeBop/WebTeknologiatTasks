@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+
+#header {
+    height: 100vh;
+    background-image: url("statue2.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+#contentDiv1 {
+    height: 300px;
+    width: 100%;
+
+    font-size: 150%;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+#contentDiv2 {
+    height: 300px;
+    width: 60%;
+
+}
+
+#contentDiv3 {
+    height: 300px;
+
+    width: 35%;
+    border-left: 1px solid darkgray;
+
+}

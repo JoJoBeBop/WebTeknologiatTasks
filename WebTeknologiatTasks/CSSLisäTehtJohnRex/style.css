@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Courier, sans-serif;
+    letter-spacing: -1px;
+}
+
+html {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+#menuDiv {
+    color: white;
+    height:30px;width:100px;
+    transform: translate(-100%, -1060%)
+}
+
+ul {
+    list-style-type: none;
+}
+
+.list {
+    height:27px;
+    width:190px;
+    background-color: #08aeac;
+    text-align: left;
+    padding-left: 4px;
+    font-size: 90%;
+    letter-spacing: 1px;
+    font-weight: 200;
+
+    padding-top: 10px;
+    margin-bottom: 5px;
+
+}
+
+.container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    transform: translate(0, 50%)
+}
+
+.content {
+    display:inline-block;
+
+
+}
+
+#boxDiv {
+    height: 550px;
+    width: 500px;
+    margin: 0 auto;
+    padding:20px 0;
+    background: #f2f2f2;
+    opacity: 0.9;
+
+}
+
+#boxDiv:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#profilePic {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 50%;
+}
+
+#catPic {
+    width: 100%;
+
+}
+
+#profileText {
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+#profileText2 {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 90%
+}
+
+#profileText3 {
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #19a5a3;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+#profileFooter {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+
+
+}

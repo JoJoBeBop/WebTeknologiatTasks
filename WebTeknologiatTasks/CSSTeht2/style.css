@@ -1,6 +1,7 @@
 * {
     margin: 0;
-}
+    padding: 0;
+    font-family: Verdana, Courier, sans-serif;}
 
 .container {
     width: 90%;
@@ -23,6 +24,7 @@
     height: 300px;
     width: 100%;
 
+
     font-size: 150%;
     text-align: center;
     border: 1px solid gray;
@@ -40,4 +42,26 @@
     width: 35%;
     border-left: 1px solid darkgray;
 
+}
+
+#downText {
+    width: 80%;
+    height: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media all and (max-width: 900px) {
+    .container {
+        width: 100%;
+        color: green;
+    }
+}
+
+@media all and (max-width: 700px) {
+    #contentDiv2 {
+        width: 100%;
+    }
 }

@@ -1,0 +1,21 @@
+#drawDiv {
+    height: 200px;
+    background: beige;
+}
+.dot {
+    height: 8px; width: 8px;
+    border-radius: 4px; /* rounds corners */
+    background: blue;
+    position: absolute;
+}
+
+.dot2 { position: absolute; display: block;
+    border: 2px solid red; border-radius: 50px;
+    height: 100px; width: 100px; }
+
+#progress {
+    border-bottom: 2px solid red;
+    width: 80px;
+    position: fixed;
+    top: 0; right: 0;
+}
